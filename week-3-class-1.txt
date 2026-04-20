@@ -1,0 +1,28 @@
+Q1. Why must every <label> have a for attribute that matches an input's id? Write a correct label-input pair from memory
+
+Ans: Clicking the label focuses the input which is key for accessibility
+
+<label for="Address">House Address</label>
+<input type="Address" id="Address"="Adress" required />
+
+Q2.  What is different about type=email vs type=text vs type=password? Give one real-world use case for each
+
+Ans: type=email validates email
+type=password hides text
+
+<label for="email">Email</label>
+<input type="email" id="email"name="email" required />
+
+<label for="password">password</label>
+<input type="password" id="password/>
+
+
+
+Q3. What is the difference between href='about.html' and href='#section-id'? When would you use each one?
+
+Ans: href is the attribute and about.html is its value while href=section always need a heading inside it.
+
+Q4.  When is it correct to use an HTML <table>? Give one example of good table use and one example of bad table use
+
+Ans: it is correct to use html table only for displaying tabular data. information that requires rows and columns to show relationships.
+An html table is not required for page layouts, form layouts, thumbnail grids, data that can be listed
