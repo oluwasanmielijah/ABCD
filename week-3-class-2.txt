@@ -1,0 +1,51 @@
+Q1. What is the difference between a class selector (.card) and an ID .selector (#card)? Which one can be reused?
+
+Ans Class selector is ideal for styling multiple elements with the same appearance, such as cards in a grid, buttons, or list items while ID selector is ideal for unique elements on a page, such as a header, footer, or main navigation container. Class selector can be reused many times.
+
+Q2. Write CSS to set the body font to Arial, text colour to #333333, and background colour to #f8f8f8
+
+Ans body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f8f8f8;
+}
+
+Q3. Define a CSS variable called --brand-color with value #ff6b35 on :root. Then use it on an h1 element
+
+Ans . /*variable  :root element /*
+:root {
+    --brand-color: #ff6b35;
+}
+   
+  h1 {
+  color: var(--brand-color);
+}
+
+
+Q4.  What is the difference between color and background-color in CSS? Write an example that uses both correctly
+
+Ans Color or foreground color sets the color of the text content inside an HTML element while background color sets the solid color behind the text, covering the element's entire content area
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .highlight-box {
+    /* 1. Sets the text color to white */
+    color: white; 
+    
+    /* 2. Sets the background color behind the text to a deep blue */
+    background-color: #003366; 
+    
+    /* Adds padding for better visual spacing */
+    padding: 20px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="highlight-box">Hello World!</h1>
+
+</body>
+</html>

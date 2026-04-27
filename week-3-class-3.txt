@@ -1,0 +1,29 @@
+Q1. Name the four layers of the CSS box model from inside to outside. 
+
+Ans The content itself, padding, border, and margin
+
+Q2. What is the difference between padding and margin? Which one adds to the clickable area of a button?
+
+Ans Padding is the space between the content and the border (inside the element) while Margin is the space outside the border. It pushes other elements away. padding adds to the clickable area of a button
+
+Q3 If a box has width: 200px, padding: 20px, and box-sizing: border-box, how wide is it in total?
+
+Ans The total width of the box is 200px
+
+Q4 What does max-width: 1100px; margin: 0 auto; do, and why is this pattern used on almost every website?
+
+Ans It means that on a phone, the container fills the whole screen. On a desktop, the content stays in a neat, 1100px-wide column in the middle of the screen with empty gutters on the sides. 
+
+Q5 What is the difference between font-size: 16px and font-size: 1rem? Which is better and why?
+
+
+Ans Font-size: 16px is a fixed, absolute unit, while Font-size: 1rem is a relative unit based on the root (html) 1rem scales with user browser settings, making it better for accessibility and responsive design. 1rem is better because it respects user preferences. If a user with low vision increases their browser's default font size, rem-sized text scales up, whereas px text does not. Also 1rem allows for easier scaling of the entire layout. Changing the root font size scales the text and, if used for padding/margin, the surrounding layout too.
+
+Q6 Write the CSS for a card that has white background, 24px padding, a light grey border, and rounded corners
+
+Ans .card {
+  background-color: #ffffff;
+  padding: 24px;
+  border: 1px solid light grey
+    border-radius: 8px;
+}
