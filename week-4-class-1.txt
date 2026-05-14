@@ -1,0 +1,60 @@
+Draw, then code. Sketch the box model on paper first, then write the CSS exercises below:
+
+Q1. Draw and label the four layers of the CSS box model from the inside out. Which layer does background-color fill?
+
+Answer: The CSS box model has four layers namely:
+(a) The Content: It is the innermost layer where text, image, width and height properties are added.
+(b) padding: Space between the content and the border
+(c) Border: The visible edge of the element that sites between the padding and the margin
+(d) Margin: space outside the border. It pushes other elements away.
+Padding inherits the element background color.
+
+Q2. What is the difference between padding and margin? Which adds space inside the element and which pushes elements apart? 
+
+Answer: Padding adds space inside an element (between content and border), while Margin adds space outside an element (pushing it away from other elements). Padding expands an element’s background, whereas margin creates transparent space around the border
+
+Q3.  Why do we add box-sizing: border-box to every element with the * selector? What exact problem does it solve?
+
+Answer: Using box-sizing: border-box with the universal * selector solves the problem of unpredictable element sizing caused by the default CSS box model
+
+
+Q4.Write CSS for a .card that is 300px wide, has 20px padding on all sides, a 2px solid #ff6b35 border, and 16px margin. Apply each of these to your portfolio project. Show the before and after in your browser. 1. What does max-width: 1100px; margin: 0 auto; do to a container? Why is this pattern used on almost every website?
+
+Answer: .card {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #ff6b35;
+  margin: 16px;
+  box-sizing: border-box; 
+}
+
+Q5. What is the difference between font-size: 16px and font-size: 1rem? Why do developers often prefer rem?
+
+Answer: font-size: 16px (Pixels): This is an absolute unit. It tells the browser to make the text exactly 16 pixels high, regardless of user settings, browser defaults, or parent elements.
+ Font-size: 1rem is  a relative unit. It refers to the font size of the <html> root element. By default, browsers set the root font size to 16px, making 1text{rem} equal to \(16\text{px}\). If the user increases their browser's default font size to \(20\text{px}\) for accessibility, 1rem automatically becomes \(20\text{px}\)
+
+Q6. Write a CSS rule that makes all <a> links orange, removes the underline by default, and adds it back on hover.
+
+Answer: a {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+Q7. Add a :hover effect to your project cards so they lift slightly when the mouse moves over them. Write the CSS here
+
+Answe: .project-card {
+  /* Smoothly animates the change over 0.3 seconds */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  /* Moves the card up by 10 pixels */
+  transform: translateY(-10px);
+  
+  /* Optional: Adds a deeper shadow to enhance the lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }

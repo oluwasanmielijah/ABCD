@@ -1,0 +1,27 @@
+Q1 What is a media query and what kind of condition does it usually check? 
+Answer: A media query is a CSS technique introduced in CSS3 that allows you to apply specific styles to a webpage only when certain conditions regarding the user's device or browser environment are met. It is a fundamental component of responsive web design, enabling a site to adapt its layout and appearance to different screen sizes, resolutions, or device capabilities (like print vs. screen)
+
+
+Q2 Write the CSS to make a three-column flex layout become a single-column layout on screens under 768px.
+
+Answer: /* Container set to flex */
+.container {
+  display: flex;
+  flex-direction: row; /* Three-column layout by default */
+}
+
+/* Individual columns */
+.column {
+  flex: 1;
+}
+
+/* Mobile styles for screens under 768px */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically */
+  }
+}
+
+ Q3 What does the viewport meta tag do, and what breaks if you forget it?
+
+ Answer:The viewport meta tag is a crucial HTML element placed in the <head> of a webpage that tells mobile browsers how to scale and size the page content to fit the screen. It is the foundation of responsive design, ensuring websites look and function well on everything from small phones to large desktop monitors.

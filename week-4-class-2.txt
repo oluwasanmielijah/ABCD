@@ -1,0 +1,54 @@
+Write each Flexbox layout from scratch. Test in your browser at desktop width first 
+Q1. What CSS property do you set on a PARENT to enable Flexbox? What happens to its direct children automatically?
+
+
+Answer: To enable Flexbox on a parent element, you must set its display property to flex (for a block-level container) or inline-flex (for an inline container). Immediately, all direct children immediately turn into "flex items," meaning they follow the Flexbox layout model instead of standard block or inline flow.
+
+ Q2. What is the difference between justify-content and align-items? Which axis does each one control? 
+ 
+ Answer: justify-content controls alignment along the main axis (horizontal by default), distributing space between items, while align-items controls alignment along the cross axis (vertical by default), aligning items relative to each other within the container. These axes swap if flex-direction is changed to column
+ 
+ 3. Write the CSS for a navbar with the logo on the left and navigation links on the right, vertically centred.
+ 
+ Answer: html
+ 
+ <nav class="navbar">
+  <div class="logo">MyLogo</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+CSS
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes logo to left and links to right */
+  align-items: center;           /* Centers items vertically */
+  padding: 1rem 5%;
+  background-color: #333;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;                     /* Adds space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff9900;                /* Optional hover effect */
+}
+ 
+  4. What does flex: 1 mean on a child element? What does adding min-width: 250px alongside it prevent?
+
+  Answer: flex: 1 on a child element is shorthand that makes it flexible, allowing it to grow and shrink to fill available space, while setting its initial size to zero. Adding min-width: 250px prevents the element from shrinking below 250 pixels, even if the parent container is too small to accommodate it
+
